@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE menu [
+<!ELEMENT menu(main,skills,hobbies,achievements,projects,contact)>
+<!ELEMENT main(name,secondname)>
+<!ATTLIST main(university)>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT secondname(#PCDATA)>
+<!ELEMENT skills(MobileDev,WebDev)>
+<!ELEMENT MobileDev(#PCDATA)>
+<!ELEMENT WebDev(#PCDATA)>
+<!ELEMENT hobbies(active,inactive)>
+<!ELEMENT active(#PCDATA)>
+<!ELEMENT inactive(#PCDATA)>
+<!ELEMENT achievements(sport,studies)>
+<!ELEMENT sport(#PCDATA)>
+<!ELEMENT (studies#PCDATA)>
+<!ELEMENT projects(mobileApp?)>
+<!ELEMENT mobileApp(#PCDATA)>
+<!ELEMENT contact(vk,linkedIn)>
+<!ELEMENT vk(#PCDATA)>
+<!ELEMENT linkedIn(#PCDATA)>
+]>
+
+<menu>
+	<main university="ГрГУ">
+		<name>Андрей</name>
+		<secondname>Молочко</secondname>
+	</main>
+	<skills>
+		<MobileDev>Здесь будут мои навыки по мобильной разработке</MobileDev>
+		<WebDev>Здест будут мои навыки по вебразработке</WebDev>
+	</skills>
+	<hobbies>
+		<active>Йога</active>
+		<inactive>Чтение</inactive>
+	</hobbies>
+	<achievements>
+		<sport>Достижения в спорте</sport>
+		<studies>Достижения в учёбе</studies>
+	</achievements>
+	<projects>
+		<mobileApp>Дневник прогресса</mobileApp>
+	</projects>
+	<contact>
+		<vk>Ссылка на страницу</vk>
+		<linkedIn>Ссылка на страницу</linkedIn>		
+	</contact>
+</menu>
