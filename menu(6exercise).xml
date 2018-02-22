@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE listbook [
+<!ELEMENT listbook (book+)>
+<!ELEMENT book (title, author+, price, pages?)>
+<!ATTLIST book id CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ATTLIST author year CDATA #REQUIRED>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price data_float CDATA #FIXED "FLOAT">
+<!ELEMENT pages (#PCDATA)>
+<!ATTLIST price data_long CDATA #FIXED "LONG">
+]>
+ <listbook>
+  <book id = "0">
+     <title>Kniga</title>
+     <author year = "10">Avtor</author>
+     <price>Cena</price>
+     <pages>Stranicu</pages>	 
+   </book>
+ </listbook>

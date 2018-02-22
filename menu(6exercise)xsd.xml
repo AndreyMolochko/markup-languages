@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listbook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book">
+          <xs:complexType>
+            <xs:sequence>
+				<xs:element name="title">
+				<xs:simpleType> 
+						<xs:restriction base="xs:string"> 
+							<xs:pattern value="[A-Z][a-z]*"/> 
+						</xs:restriction> 
+					</xs:simpleType> 
+				</xs:element>
+				<xs:element name="author"> 
+					<xs:simpleType> 
+						<xs:restriction base="xs:string"> 
+							<xs:pattern value="[A-Z][a-z]*"/> 
+						</xs:restriction> 
+					</xs:simpleType> 
+				</xs:element> 
+              <xs:element type="xs:float" name="price"/>
+              <xs:element name="pages">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="10000"/> 
+					</xs:restriction>					
+				<xs:simpleType>
+			  </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+ <listbook>
+  <book id = "0">
+     <title>Kniga</title>
+     <author>Avtor</author>
+     <price>320</price>
+     <pages>700</pages>	 
+   </book>
+ </listbook>
