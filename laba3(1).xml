@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="Windows-1251"?> 
 <?xml-stylesheet type='text/xsl' href='ex2.xsl'?> 
-<employees>
-  <employee hireDate="04/23/1999">
-    <last>Hill</last>
-    <first>Phil</first>
-    <salary>100000</salary>
-  </employee>
+<listbook>  
+  <book id = "0">
+     <title>Oldman and sea</title>
+     <author>Cheminguei</author>
+     <price>120</price>
+     <pages>140</pages>	 
+   </book> 
+   <book id = "4">
+     <title>Crime and Punishment</title>
+     <author>Fyodor Dostoyevsky </author>
+     <price>280</price>
+     <pages>380</pages>	 
+   </book>
+   <book id = "2">
+     <title>Anna Karenina</title>
+     <author>Leo Tolstoy</author>
+     <price>270</price>
+     <pages>200</pages>	 
+   </book>
+   <book id = "3">
+     <title>War and Peace</title>
+     <author>Leo Tolstoy</author>
+     <price>720</price>
+     <pages>1146</pages>	 
+   </book>
+   <book id = "1">
+     <title>Dead Souls</title>
+     <author>Nikolai Gogol</author>
+     <price>130</price>
+     <pages>180</pages>	 
+   </book>
 
-  <employee hireDate="09/01/1998">
-    <last>Herbert</last>
-    <first>Johnny</first>
-    <salary>95000</salary>
-  </employee>
-
-  <employee hireDate="08/20/2000">
-    <last>Hill</last>
-    <first>Graham</first>
-    <salary>89000</salary>
-  </employee>
-</employees>
+  
+</listbook>
