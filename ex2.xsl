@@ -1,25 +1,32 @@
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-     version="1.0">
+<xsl:template match="/">
+  <xsl:apply-templates/>
+</xsl:template>
 
-  <xsl:output method="text"/>
-
-  <xsl:template match="listbook">
-    <xsl:apply-templates>
-      <xsl:sort select="@id"/>
-    </xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template match="book">
-    Title:      <xsl:apply-templates select="title"/>
-    Author:     <xsl:apply-templates select="author"/>
-    Price:      <xsl:apply-templates select="price"/>
-    Pages:      <xsl:apply-templates select="pages"/>
-    ID:         <xsl:apply-templates select="@id"/>
-    <xsl:text>
-	
-	</xsl:text>
-
-  </xsl:template>
+<xsl:template match="listbook">
+  <table>
+    <tr style="background-color:#fff321">
+      <th>title</th>
+      <th>author</th>
+      <th>price</th>
+      <th>pages</th>
+      <th>id</th>  
+	  
+    </tr>
+    <xsl:for-each select="book">
+      <xsl:if test="@id = '1'">
+        <tr style="background-color:#00cc00">
+          <td><xsl:value-of select="title"/></td>
+          <td><xsl:value-of select="author"/></td>
+          <td><xsl:value-of select="price"/></td>
+          <td><xsl:value-of select="pages"/></td>          
+          <td><xsl:value-of select="@id"/></td>          
+       </tr>
+      </xsl:if>
+    </xsl:for-each>
+  </table>
+</xsl:template>
 
 </xsl:stylesheet>
